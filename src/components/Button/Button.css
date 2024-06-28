@@ -1,0 +1,50 @@
+.btn {
+  width: fit-content;
+  border-radius: var(--pmd-br-l);
+  border: none;
+  cursor: pointer;
+}
+
+/* Colors */
+.btn.primary-btn {
+  background-color: var(--pmd-color-bg-primary);
+}
+
+.btn.secondary-btn {
+  background-color: transparent;
+}
+
+.btn.tertiary-btn {
+  background-color: var(--pmd-color-bg-tertiary);
+}
+
+.btn.primary-btn a,
+.btn.tertiary-btn a {
+  color: var(--pmd-color-text-secondary);
+}
+
+.btn.secondary-btn a {
+  color: var(--pmd-color-text-primary);
+}
+
+/* Sizes */
+.btn.s {
+  font-size: var(--pmd-font-size-s);
+  padding: var(--pmd-padding-btn-s);
+}
+
+.btn.m {
+  font-size: var(--pmd-font-size-m);
+  padding: var(--pmd-padding-btn-m);
+}
+
+.btn.m-special {
+  font-size: var(--pmd-font-size-m);
+  padding: var(--pmd-padding-btn-m-special);
+  width: 35px;
+}
+
+.btn.l {
+  font-size: var(--pmd-font-size-l);
+  padding: var(--pmd-padding-btn-l);
+}

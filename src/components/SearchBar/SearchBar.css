@@ -1,0 +1,20 @@
+#formSearchBar {
+  width: 100%;
+}
+
+#formSearchBar label {
+  display: none;
+}
+
+#searchBar {
+  width: 100%;
+  border: none;
+  border-radius: var(--pmd-br-l);
+  padding: var(--pmd-padding-btn-l);
+  background-color: var(--pmd-color-bg-grayscale);
+  font-size: var(--pmd-font-size-l);
+}
+
+#searchBar:focus {
+  outline-color: var(--pmd-color-primary);
+}

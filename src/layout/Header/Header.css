@@ -1,0 +1,16 @@
+#header {
+  position: sticky;
+  max-width: 100%;
+  /*   height: 100px; */
+  padding: var(--pmd-padding-header);
+  gap: var(--pmd-gap-s);
+  background-color: var(--pmd-color-bg-secondary);
+  justify-content: space-between;
+}
+
+@media (max-width: 678px) {
+  #mainNav,
+  #navSecondary {
+    display: none;
+  }
+}

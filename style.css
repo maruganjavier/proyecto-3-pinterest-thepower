@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: var(--pmd-font-family);
+  font-weight: var(--pmd-font-weight-l);
+}
+
+:root {
+  /* font-family */
+  --pmd-font-family: "Inter", sans-serif;
+  /* font-weigth */
+  --pmd-font-weight-s: 200;
+  --pmd-font-weight-m: 300;
+  --pmd-font-weight-l: 400;
+  /* fonts sizes */
+  --pmd-base-font-size: 16px;
+  --pmd-base-line-height: 1.5;
+
+  --pmd-font-size-xs: 0.75rem;
+  --pmd-font-size-s: 0.875rem;
+  --pmd-font-size-m: 1rem;
+  --pmd-font-size-l: 1.125rem;
+  --pmd-font-size-xl: 1.25rem;
+  --pmd-font-size-xxl: 1.5rem;
+
+  /* Colors */
+  --pmd-color-text-primary: rgb(0, 0, 0);
+  --pmd-color-text-secondary: rgb(255, 255, 255);
+  --pmd-color-text-tertiary: rgb(117, 117, 117);
+
+  --pmd-color-primary: rgb(0, 0, 0);
+  --pmd-color-secondary: rgb(255, 255, 255);
+  --pmd-color-tertiary: rgb(231, 50, 35);
+
+  --pmd-color-bg-primary: rgb(0, 0, 0);
+  --pmd-color-bg-secondary: rgb(255, 255, 255);
+  --pmd-color-bg-tertiary: rgb(231, 50, 35);
+  --pmd-color-bg-grayscale: rgb(236, 236, 236);
+
+  /* Spacings */
+  --pmd-margin-xs: 5px;
+  --pmd-margin-s: 10px;
+  --pmd-margin-m: 20px;
+  --pmd-margin-l: 30px;
+  --pmd-margin-xl: 40px;
+
+  --pmd-padding-xs: 5px;
+  --pmd-padding-s: 10px;
+  --pmd-padding-m: 20px;
+  --pmd-padding-l: 30px;
+  --pmd-padding-xl: 40px;
+  --pmd-padding-header: 24px 20px 14px 20px;
+  --pmd-padding-btn-s: 4px 14px;
+  --pmd-padding-btn-m: 8px 18px;
+  --pmd-padding-btn-m-special: 8px;
+  --pmd-padding-btn-l: 12px 22px;
+
+  --pmd-gap-special-icon: 2px;
+  --pmd-gap-xs: 5px;
+  --pmd-gap-s: 10px;
+  --pmd-gap-m: 20px;
+  --pmd-gap-l: 30px;
+  --pmd-gap-xl: 40px;
+
+  /* border radius */
+  --pmd-br-xs: 5px;
+  --pmd-br-s: 10px;
+  --pmd-br-m: 20px;
+  --pmd-br-l: 30px;
+  --pmd-br-xl: 40px;
+  --pmd-br-100: 100%;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: var(--pmd-color-bg-secondary);
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--pmd-gap-s);
+  flex-wrap: nowrap;
+}
+
+/* .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: auto;
+  gap: var(--pmd-gap-s);
+  padding: var(--pmd-padding-m);
+} */
+
+.masonry-container {
+  columns: 5 250px;
+  column-gap: var(--pmd-gap-s);
+  padding: var(--pmd-padding-m);
+}

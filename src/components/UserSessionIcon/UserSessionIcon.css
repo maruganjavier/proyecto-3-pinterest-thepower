@@ -1,0 +1,11 @@
+#userSessionIcon {
+  min-width: 35px;
+  min-height: 35px;
+  border-radius: 100%;
+  background-color: var(--pmd-color-bg-grayscale);
+  cursor: pointer;
+}
+
+#nameUser {
+  color: var(--pmd-color-text-tertiary);
+}

@@ -1,0 +1,8 @@
+#navSecondary {
+  max-width: 100%;
+}
+
+#navSecondary img {
+  width: 30px;
+  cursor: pointer;
+}
