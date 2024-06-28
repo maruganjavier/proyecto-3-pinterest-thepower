@@ -18,3 +18,9 @@
 #searchBar:focus {
   outline-color: var(--pmd-color-primary);
 }
+
+/* Delete default values. glass icon */
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}

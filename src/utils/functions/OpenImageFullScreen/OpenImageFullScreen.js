@@ -11,28 +11,35 @@ export const OpenImageFullScreen = (imgSrc) => {
   fullScreenImage.classList.add("fullscreen-image");
 
   const closeButton = Button({
-    text: "x",
+    text: "X",
     importance: "tertiary-btn",
     size: "m-special",
     ariaLabel: "Cerrar"
   });
   closeButton.classList.add("close-button", "flex-container");
 
-  const closeFullScreen = () => {
-    section.removeChild(fullScreenContainer);
-    document.removeEventListener("keydown", handleEscapeKey);
+  const CloseFullScreen = () => {
+    fullScreenContainer.classList.remove("show");
+    setTimeout(() => {
+      section.removeChild(fullScreenContainer);
+    }, 300);
+    document.removeEventListener("keydown", HandleEscapeKey);
   };
 
-  const handleEscapeKey = (e) => {
+  const HandleEscapeKey = (e) => {
     if (e.key === "Escape") {
-      closeFullScreen();
+      CloseFullScreen();
     }
   };
 
-  closeButton.addEventListener("click", closeFullScreen);
-  document.addEventListener("keydown", handleEscapeKey);
+  closeButton.addEventListener("click", CloseFullScreen);
+  document.addEventListener("keydown", HandleEscapeKey);
 
   fullScreenContainer.append(fullScreenImage);
   fullScreenContainer.append(closeButton);
   section.append(fullScreenContainer);
+
+  requestAnimationFrame(() => {
+    fullScreenContainer.classList.add("show");
+  });
 };
