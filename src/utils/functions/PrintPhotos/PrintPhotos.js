@@ -52,14 +52,14 @@ export const PrintPhotos = ({ array = "[]" }) => {
       "div-icons-card",
       "flex-container"
     );
-    imgIconCamera.src = "./src/assets/icon-camera.svg";
+    imgIconCamera.src = "./assets/images/icons/icon-camera.svg";
     imgIconCamera.alt = "Más fotos disponibles";
     divIconHeart.classList.add(
       "icon-heart-container",
       "div-icons-card",
       "flex-container"
     );
-    imgIconHeart.src = "./src/assets/icon-heart.svg";
+    imgIconHeart.src = "./assets/images/icons/icon-heart.svg";
     imgIconHeart.alt = "Me gusta";
     pIconCamera.textContent = `+${getRandomNumber({})}`;
     pIconHeart.textContent = getRandomNumber({});
@@ -83,7 +83,7 @@ export const PrintPhotos = ({ array = "[]" }) => {
     aImgShare.href = "#";
     aImgShare.title = "Compartir";
     imgShare.classList.add("img-share");
-    imgShare.src = "./src/assets/icon-upload-share.svg";
+    imgShare.src = "./assets/images/icons/icon-upload-share.svg";
     imgShare.alt = "Compartir";
     pDate.textContent = user.date;
 

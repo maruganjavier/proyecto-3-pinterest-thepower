@@ -15,7 +15,7 @@ export const MainLogo = () => {
   });
   logo.id = "mainLogo";
   logo.alt = "Pinterest logo";
-  logo.src = "./src/assets/logo-pinterest.svg";
+  logo.src = "./assets/images/logo-pinterest.svg";
 
   h1.append(a);
   a.append(logo);

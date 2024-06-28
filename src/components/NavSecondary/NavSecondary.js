@@ -9,13 +9,13 @@ export const NavSecondary = () => {
 
   const icons = [
     {
-      src: "./src/assets/icon-bell.svg",
+      src: "./assets/images/icons/icon-bell.svg",
       alt: "Icono de campana",
       href: "#",
       title: "Avisos"
     },
     {
-      src: "./src/assets/icon-comment.svg",
+      src: "./assets/images/icons/icon-comment.svg",
       alt: "Icono de comentarios",
       href: "#",
       title: "Comentarios"
