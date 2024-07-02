@@ -2,11 +2,10 @@ import "./PrintPhotos.css";
 
 import { getRandomNumber } from "../GetRandomNumber/GetRandomNumber";
 import { Button } from "../../../components/Button/Button";
-import { Users } from "/src/data/Users";
-import { getRandomUser } from "../GetRandomUser/GetRandomUser";
+import { FetchUnsplashPhotos } from "../../../data/FetchUnsplashPhotos";
 import { OpenImageFullScreen } from "../OpenImageFullScreen/OpenImageFullScreen";
 
-export const PrintPhotos = ({ array = "[]" }) => {
+export const PrintPhotos = async ({ array = "[]" }) => {
   const main = document.createElement("main");
   let section = document.querySelector("#gallery");
 
@@ -18,6 +17,8 @@ export const PrintPhotos = ({ array = "[]" }) => {
   }
 
   section.innerHTML = "";
+
+  const arrayFetch = await FetchUnsplashPhotos();
 
   array.forEach((photo, index) => {
     const div = document.createElement("div");
@@ -67,25 +68,24 @@ export const PrintPhotos = ({ array = "[]" }) => {
     img.src = photo.urls.regular;
     img.alt = photo.alt_description || "fotografía de Unsplash";
     img.onload = () => {
-      if (index === array.length - 1) {
+      if (index === arrayFetch.length - 1) {
         main.classList.add("loaded");
       }
     };
     btnVisit.classList.add("btn-visit");
 
     divUser.classList.add("user-container", "flex-container");
-    const user = getRandomUser(Users);
     divImgUser.classList.add("img-user-container", "flex-container");
-    divImgUser.style.backgroundColor = user.color;
-    imgUser.src = user.image;
-    pUser.textContent = user.name;
+    divImgUser.style.backgroundColor = photo.color;
+    imgUser.src = photo.user.profile_image.large;
+    pUser.textContent = photo.user.name;
     divShare.classList.add("share-container", "flex-container");
     aImgShare.href = "#";
     aImgShare.title = "Compartir";
     imgShare.classList.add("img-share");
     imgShare.src = "./assets/images/icons/icon-upload-share.svg";
     imgShare.alt = "Compartir";
-    pDate.textContent = user.date;
+    pDate.textContent = photo.created_at.slice(0, 10);
 
     btnVisit.addEventListener("click", (e) => {
       e.preventDefault();

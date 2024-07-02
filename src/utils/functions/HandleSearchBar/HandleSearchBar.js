@@ -10,6 +10,7 @@ export const HandleSearchBar = (onSearch) => {
       if (query) {
         //console.log(query)
         onSearch(query);
+        inputSearch.value = "";
       }
     }, doneTypingInterval);
   };
@@ -21,6 +22,7 @@ export const HandleSearchBar = (onSearch) => {
       const query = e.target.value.toLowerCase().trim();
       if (query) {
         onSearch(query);
+        inputSearch.value = "";
       }
 
       inputSearch.addEventListener("input", handleInput);

@@ -15,6 +15,6 @@ export const FetchUnsplashPhotos = async (query) => {
   const res = await response.json();
 
   const resultsUnsplash = res.results;
-  //console.log(resultsUnsplash);
+
   return resultsUnsplash;
 };
